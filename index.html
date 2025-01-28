@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 1em;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        .login-container img {
+            width: 175px;
+            margin-bottom: 20px;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0095f6;
+            color: white;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #007ab8;
+        }
+
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #00376b;
+            cursor: pointer;
+        }
+
+        .create-account {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #0095f6;
+            cursor: pointer;
+        }
+
+        .create-account:hover,
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <img src="./images/instagramLogo.jpg" alt="Instagram Logo">
+        <input type="text" class="login-input" id="username" placeholder="Username" required>
+        <input type="password" class="login-input" id="password" placeholder="Password" required>
+        <button class="login-button" onclick="login()">Log In</button>
+        <span class="forgot-password" onclick="forgotPassword()">Forgot password?</span>
+        <div>
+            <span>Don't have an account?</span> <span class="create-account" onclick="createAccount()">Sign up</span>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username && password) {
+                alert("Login successful");
+            } else {
+                alert("Please enter both username and password");
+            }
+        }
+
+        function forgotPassword() {
+            alert("Redirecting to password recovery page...");
+        }
+
+        function createAccount() {
+            alert("Redirecting to the sign-up page...");
+        }
+    </script>
+
+</body>
+
+</html>
